@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FoodShare</string>
+    <string name="title_home">FoodShare</string>
+    <string name="title_dashboard">Publish</string>
+    <string name="title_notifications">profile</string>
+</resources>
