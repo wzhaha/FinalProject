@@ -5,8 +5,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.food.test.finalproject.R;
 import com.food.test.finalproject.adapter.ViewPagerAdapter;
@@ -17,6 +20,9 @@ import com.food.test.finalproject.utils.ActivityUtils;
 import com.food.test.finalproject.utils.BottomNavigationViewHelper;
 
 public class MainActivity extends AppCompatActivity {
+
+    //z自定义的弹出框
+    SelectPicPopupWindow shareTypeSelect;
 
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
@@ -30,13 +36,32 @@ public class MainActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(0);
                     return true;
                 case R.id.navigation_dashboard:
-                    viewPager.setCurrentItem(1);
+//                    viewPager.setCurrentItem(1);
+                    shareTypeSelect = new SelectPicPopupWindow(MainActivity.this, shareItemsOnClick);
+                    shareTypeSelect.showAtLocation(MainActivity.this.findViewById(R.id.view_pager),Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                     return true;
                 case R.id.navigation_notifications:
                     viewPager.setCurrentItem(2);
                     return true;
             }
             return false;
+        }
+    };
+
+    private View.OnClickListener shareItemsOnClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            shareTypeSelect.dismiss();
+            switch (view.getId()){
+                case R.id.btn_take_photo:
+                    Toast.makeText(getBaseContext(), "take photo", Toast.LENGTH_LONG).show();
+                    break;
+                case R.id.btn_pick_photo:
+                    Toast.makeText(getBaseContext(), "pick photo", Toast.LENGTH_LONG).show();
+                default:
+                    break;
+
+            }
         }
     };
 
