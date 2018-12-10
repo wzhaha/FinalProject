@@ -3,4 +3,7 @@
     <string name="title_home">FoodShare</string>
     <string name="title_dashboard">Publish</string>
     <string name="title_notifications">profile</string>
+    <string name="take_photo">拍摄</string>
+    <string name="pick_photo">从相册选择</string>
+    <string name="cancle">取消</string>
 </resources>
