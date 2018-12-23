@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivInstagram"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/btn_border"
+        android:hint="@string/username"
+        android:padding="12dp"
+        android:textColorHint="@color/body_text"
+        android:textColor="@color/black_80_transparent"
+        android:textSize="14dp" />
+
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etUsername"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/btn_border"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/body_text"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPassword"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_border_blue"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_2" />
+
+    <ImageView
+        android:id="@+id/ivInstagram"
+        android:layout_width="181dp"
+        android:layout_height="172dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/instagram" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/blur_mask_tint_color"
+        android:text="@string/signUp"
+        android:textAllCaps="false"
+        android:textColor="@color/black_80_transparent" />
+
+    <TextView
+        android:id="@+id/forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/btnLogin"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/forget"
+        android:textColor="@color/grey_5"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/getHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_toRightOf="@id/forget"
+        android:text="@string/getHelp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="12dp"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="144dp"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/forget"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/or"
+        android:layout_marginStart="32dp"
+        android:background="@color/grey_4" />
+
+    <View
+        android:layout_width="144dp"
+        android:layout_height="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/or"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/forget"
+        android:layout_marginEnd="32dp"
+        android:background="@color/grey_4" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forget"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/or"
+        android:textColor="@color/grey_5"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/qqlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/or"
+        android:layout_centerHorizontal="@id/fbLogo"
+        android:layout_marginEnd="110dp"
+        android:text="@string/fb"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/fbLogo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/or"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/qqlogin"
+        android:src="@drawable/qq" />
+</RelativeLayout>

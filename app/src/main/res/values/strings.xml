@@ -1,9 +1,21 @@
 <resources>
-    <string name="app_name">FoodShare</string>
+    <string name="app_name">gymwz</string>
     <string name="title_home">FoodShare</string>
     <string name="title_dashboard">Publish</string>
     <string name="title_notifications">profile</string>
     <string name="take_photo">拍摄</string>
     <string name="pick_photo">从相册选择</string>
     <string name="cancle">取消</string>
+    <string name="username">Phone number, email, or username</string>
+    <string name="password">Password</string>
+    <string name="signUp">Don\'t have an account? Sign Up.</string>
+    <string name="forget">Forgot your login details?</string>
+    <string name="getHelp">Get help signing in.</string>
+    <string name="or">OR</string>
+    <string name="already">Already have an account?  <u>Login </u></string>
+    <string name="fb">Log in with QQ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button">Button</string>
 </resources>

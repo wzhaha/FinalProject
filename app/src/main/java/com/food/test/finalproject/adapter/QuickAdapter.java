@@ -1,10 +1,12 @@
 package com.food.test.finalproject.adapter;
 
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -37,8 +39,6 @@ public abstract class QuickAdapter<T> extends RecyclerView.Adapter<QuickAdapter.
         this.mDatas=list;
     }
 
-
-
     public abstract void convert(VH holder, T data, int position);
 
     public static class VH extends RecyclerView.ViewHolder{
@@ -68,6 +68,17 @@ public abstract class QuickAdapter<T> extends RecyclerView.Adapter<QuickAdapter.
         public void setText(int id, String value){
             TextView view = getView(id);
             view.setText(value);
+        }
+
+        public void setImage(int id,int picid){
+            ImageView imageView=getView(id);
+            imageView.setImageResource(picid);
+
+        }
+
+        public void setBitImage(int id,Bitmap picid){
+            ImageView imageView=getView(id);
+            imageView.setImageBitmap(picid);
         }
     }
 }
