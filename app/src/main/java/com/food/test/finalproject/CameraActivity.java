@@ -1,5 +1,6 @@
 package com.food.test.finalproject;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,8 @@ public class CameraActivity extends AppCompatActivity {
             public void captureSuccess(Bitmap bitmap) {
                 //获取图片bitmap
                 Log.i("JCameraView cc", "bitmap = " + bitmap.getWidth());
+                Intent newPhoto = new Intent(getBaseContext(), NewPhotoActivity.class);
+                startActivity(newPhoto);
                 finish();
             }
             @Override
