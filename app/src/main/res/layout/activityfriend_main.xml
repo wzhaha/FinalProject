@@ -8,7 +8,29 @@
     android:orientation="vertical"
     tools:context=".activity.MainFriendActivity">
 
-    <include layout="@layout/layout_main_titlebar"/>
+    <!--<include layout="@layout/layout_main_titlebar"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/headBackground"
+        android:id="@+id/main_title_bar">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/instagram" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_marginTop="47dp"></View>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/bodyLayout"
@@ -46,9 +68,11 @@
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_alignBottom="@+id/recyclerView"
-            android:layout_marginBottom="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="550dp"
+            android:layout_marginBottom="-20dp"
             android:background="?android:attr/windowBackground"
             app:itemIconTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"

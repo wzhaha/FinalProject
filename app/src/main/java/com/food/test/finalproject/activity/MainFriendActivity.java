@@ -102,7 +102,7 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
 	private SuperRecyclerView recyclerView;
 	private RelativeLayout bodyLayout;
 	private LinearLayoutManager layoutManager;
-    private TitleBar titleBar;
+    private RelativeLayout titleBar;
 
     private final static int TYPE_PULLREFRESH = 1;
     private final static int TYPE_UPLOADREFRESH = 2;
@@ -224,7 +224,7 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
     	//增加底部导航
 		final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 		navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-		BottomNavigationViewHelper.disableShiftMode(navigation);
+//		BottomNavigationViewHelper.disableShiftMode(navigation);
 
         initTitle();
         initUploadDialog();
@@ -311,20 +311,21 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
 
     private void initTitle() {
 
-        titleBar = (TitleBar) findViewById(R.id.main_title_bar);
-        titleBar.setTitle("朋友圈");
-        titleBar.setTitleColor(getResources().getColor(R.color.white));
-        titleBar.setBackgroundColor(getResources().getColor(R.color.title_bg));
-
-        TextView textView = (TextView) titleBar.addAction(new TitleBar.TextAction("发布视频") {
-            @Override
-            public void performAction(View view) {
-                //Toast.makeText(MainFriendActivity.this, "敬请期待...", Toast.LENGTH_SHORT).show();
-
-//				QPManager.startRecordActivity(MainFriendActivity.this);
-            }
-        });
-        textView.setTextColor(getResources().getColor(R.color.white));
+        titleBar = (RelativeLayout) findViewById(R.id.main_title_bar);
+//        titleBar.setTitle("FoodShare");
+//        titleBar.setTitleColor(getResources().getColor(R.color.black));
+//        titleBar.setBackgroundColor(getResources().getColor(R.color.white));
+//
+//        TextView textView = (TextView) titleBar.addAction(new TitleBar.TextAction("发布") {
+//            @Override
+//            public void performAction(View view) {
+//                Toast.makeText(MainFriendActivity.this, "敬请期待...", Toast.LENGTH_SHORT).show();
+//
+////				QPManager.startRecordActivity(MainFriendActivity.this);
+//            }
+//        });
+//
+//        textView.setTextColor(getResources().getColor(R.color.black));
     }
 
 
