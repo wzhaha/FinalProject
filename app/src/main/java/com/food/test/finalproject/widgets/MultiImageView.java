@@ -215,7 +215,11 @@ public class MultiImageView extends LinearLayout {
 		imageView.setOnClickListener(new ImageOnClickListener(position));
 		imageView.setBackgroundColor(getResources().getColor(R.color.im_font_color_text_hint));
 //		imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon_head_bg));
-		imageView.setImageBitmap(new UrlToBitmap().returnBitMap(photoInfo.url));
+		if (photoInfo.bitmap == null) {
+			imageView.setImageBitmap(new UrlToBitmap().returnBitMap(photoInfo.url));
+		} else {
+			imageView.setImageBitmap(photoInfo.bitmap);
+		}
 //		Glide.with(getContext()).load(photoInfo.url).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
 
 		return imageView;
