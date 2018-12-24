@@ -1,5 +1,6 @@
 package com.food.test.finalproject;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Environment;
@@ -11,10 +12,27 @@ import com.cjt2325.cameralibrary.JCameraView;
 import com.cjt2325.cameralibrary.listener.ClickListener;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.util.Random;
 
 public class CameraActivity extends AppCompatActivity {
     JCameraView jCameraView;
+    @Override
+    protected void onActivityResult(int req, int res, Intent data){
+        // 收到结果，回传
+        setResult(RESULT_OK, data);
+        finish();
+    }
+    private static final String ALLOWED_CHARACTERS ="0123456789qwertyuiopasdfghjklzxcvbnm";
 
+    private static String getRandomString(final int sizeOfRandomString)
+    {
+        final Random random=new Random();
+        final StringBuilder sb=new StringBuilder(sizeOfRandomString);
+        for(int i=0;i<sizeOfRandomString;++i)
+            sb.append(ALLOWED_CHARACTERS.charAt(random.nextInt(ALLOWED_CHARACTERS.length())));
+        return sb.toString();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +54,20 @@ public class CameraActivity extends AppCompatActivity {
             @Override
             public void captureSuccess(Bitmap bitmap) {
                 //获取图片bitmap
-                Log.i("JCameraView cc", "bitmap = " + bitmap.getWidth());
-                Intent newPhoto = new Intent(getBaseContext(), NewPhotoActivity.class);
-                startActivity(newPhoto);
-                finish();
+                //Write file
+                try{
+                    String filename = getRandomString(8) + ".png";
+                    FileOutputStream stream = openFileOutput(filename, Context.MODE_PRIVATE);
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    stream.close();
+                    bitmap.recycle();
+                    Intent newPhoto = new Intent(getBaseContext(), NewPhotoActivity.class);
+                    newPhoto.putExtra("bitmap", filename);
+                    startActivityForResult(newPhoto, 1);
+                }
+                catch (Exception ignored) {}
             }
+
             @Override
             public void recordSuccess(String url,Bitmap firstFrame) {
                 //获取视频路径
@@ -58,5 +85,10 @@ public class CameraActivity extends AppCompatActivity {
                 CameraActivity.this.finish();
             }
         });
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle oldInstanceState) {
+        super.onSaveInstanceState(oldInstanceState);
+        oldInstanceState.clear();
     }
 }

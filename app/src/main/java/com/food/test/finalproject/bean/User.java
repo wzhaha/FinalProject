@@ -1,4 +1,7 @@
 package com.food.test.finalproject.bean;
+
+import java.io.Serializable;
+
 /**
  * 
 * @ClassName: User 
@@ -7,7 +10,7 @@ package com.food.test.finalproject.bean;
 * @date 2015-12-28 下午3:45:04 
 *
  */
-public class User {
+public class User implements Serializable {
 	private String id;
 	private String name;
 	private String headUrl;

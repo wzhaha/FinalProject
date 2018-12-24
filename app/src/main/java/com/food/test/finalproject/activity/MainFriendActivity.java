@@ -139,7 +139,7 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
 				case R.id.btn_take_photo:
 					Toast.makeText(getBaseContext(), "take photo", Toast.LENGTH_LONG).show();
 					Intent intent = new Intent(getBaseContext(), CameraActivity.class);
-					startActivity(intent);
+					startActivityForResult(intent, 1);
 					break;
 				case R.id.btn_pick_photo:
 					Toast.makeText(getBaseContext(), "pick photo", Toast.LENGTH_LONG).show();
@@ -573,6 +573,8 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 		if (resultCode == RESULT_OK) {
+		    CircleItem item = (CircleItem) data.getExtras().getSerializable("circle");
+		    addCircle(item);
 //			RecordResult result =new RecordResult(data);
 //			//得到视频地址，和缩略图地址的数组，返回十张缩略图
 //			videoFile = result.getPath();

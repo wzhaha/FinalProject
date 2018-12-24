@@ -2,10 +2,11 @@ package com.food.test.finalproject.bean;
 
 import android.text.TextUtils;
 
+import java.io.Serializable;
 import java.util.List;
 
 
-public class CircleItem extends BaseBean{
+public class CircleItem extends BaseBean implements Serializable {
 
 	public final static String TYPE_URL = "1";
 	public final static String TYPE_IMG = "2";

@@ -1,6 +1,8 @@
 package com.food.test.finalproject.widgets;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,6 +20,7 @@ import com.food.test.finalproject.utils.UrlToBitmap;
 //import com.yiw.circledemo.bean.PhotoInfo;
 //import com.yiw.circledemo.utils.DensityUtil;
 
+import java.io.FileInputStream;
 import java.util.List;
 
 /**
@@ -215,10 +218,19 @@ public class MultiImageView extends LinearLayout {
 		imageView.setOnClickListener(new ImageOnClickListener(position));
 		imageView.setBackgroundColor(getResources().getColor(R.color.im_font_color_text_hint));
 //		imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon_head_bg));
-		if (photoInfo.bitmap == null) {
+		if (photoInfo.path == null) {
 			imageView.setImageBitmap(new UrlToBitmap().returnBitMap(photoInfo.url));
 		} else {
-			imageView.setImageBitmap(photoInfo.bitmap);
+			// 读取临时
+			try {
+				FileInputStream is = getContext().openFileInput(photoInfo.path);
+				Bitmap bitmap = BitmapFactory.decodeStream(is);
+				is.close();
+				imageView.setImageBitmap(bitmap);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 		}
 //		Glide.with(getContext()).load(photoInfo.url).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
 
