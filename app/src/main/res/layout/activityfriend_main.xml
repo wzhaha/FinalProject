@@ -19,11 +19,14 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="234dp"
+            android:layout_height="35dp"
+
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/instagram" />
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="7dp"
+            app:srcCompat="@drawable/bg_title" />
 
         <View
             android:layout_width="match_parent"
@@ -35,7 +38,7 @@
     <RelativeLayout
         android:id="@+id/bodyLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <com.malinskiy.superrecyclerview.SuperRecyclerView
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -70,9 +73,8 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignBottom="@+id/recyclerView"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="465dp"
-            android:layout_marginBottom="-20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
             android:background="?android:attr/windowBackground"
             app:itemIconTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
