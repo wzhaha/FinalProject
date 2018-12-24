@@ -199,8 +199,7 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
         String[] perms = {Manifest.permission.CALL_PHONE
                 , Manifest.permission.WRITE_EXTERNAL_STORAGE
                 , Manifest.permission.READ_EXTERNAL_STORAGE
-                , Manifest.permission.CAMERA
-                , Manifest.permission.RECORD_AUDIO};
+                , Manifest.permission.CAMERA};
 
         if (EasyPermissions.hasPermissions(this, perms)) {
             // Already have permission, do the thing
