@@ -26,41 +26,22 @@ import java.util.Random;
  */
 public class DatasUtil {
 	public static final String[] CONTENTS = { "",
-			"哈哈，18123456789,ChinaAr  http://www.ChinaAr.com;一个不错的VR网站。哈哈，ChinaAr  http://www.ChinaAr.com;一个不错的VR网站。哈哈，ChinaAr  http://www.ChinaAr.com;一个不错的VR网站。哈哈，ChinaAr  http://www.ChinaAr.com;一个不错的VR网站。",
-			//"今天是个好日子，http://www.ChinaAr.com;一个不错的VR网站,18123456789,",
-			//"呵呵，http://www.ChinaAr.com;一个不错的VR网站,18123456789,",
-			//"只有http|https|ftp|svn://开头的网址才能识别为网址，正则表达式写的不太好，如果你又更好的正则表达式请评论告诉我，谢谢！",
-			"VR（Virtual Reality，即虚拟现实，简称VR），是由美国VPL公司创建人拉尼尔（Jaron Lanier）在20世纪80年代初提出的。其具体内涵是：综合利用计算机图形系统和各种现实及控制等接口设备，在计算机上生成的、可交互的三维环境中提供沉浸感觉的技术。其中，计算机生成的、可交互的三维环境称为虚拟环境（即Virtual Environment，简称VE）。虚拟现实技术是一种可以创建和体验虚拟世界的计算机仿真系统的技术。它利用计算机生成一种模拟环境，利用多源信息融合的交互式三维动态视景和实体行为的系统仿真使用户沉浸到该环境中。",
-			//"哈哈哈哈",
-			//"图不错",
-			"我勒个去" };
-	/*public static final String[] PHOTOS = {
-			"http://f.hiphotos.baidu.com/image/pic/item/faf2b2119313b07e97f760d908d7912396dd8c9c.jpg",
-			"http://g.hiphotos.baidu.com/image/pic/item/4b90f603738da977c76ab6fab451f8198718e39e.jpg",
-			"http://e.hiphotos.baidu.com/image/pic/item/902397dda144ad343de8b756d4a20cf430ad858f.jpg",
-			"http://a.hiphotos.baidu.com/image/pic/item/a6efce1b9d16fdfa0fbc1ebfb68f8c5495ee7b8b.jpg",
-			"http://b.hiphotos.baidu.com/image/pic/item/a71ea8d3fd1f4134e61e0f90211f95cad1c85e36.jpg",
-			"http://c.hiphotos.baidu.com/image/pic/item/7dd98d1001e939011b9c86d07fec54e737d19645.jpg",
-			"http://f.hiphotos.baidu.com/image/pic/item/f11f3a292df5e0fecc3e83ef586034a85edf723d.jpg",
-			"http://cdn.duitang.com/uploads/item/201309/17/20130917111400_CNmTr.thumb.224_0.png",
-			"http://pica.nipic.com/2007-10-17/20071017111345564_2.jpg",
-			"http://pic4.nipic.com/20091101/3672704_160309066949_2.jpg",
-			"http://pic4.nipic.com/20091203/1295091_123813163959_2.jpg",
-			"http://pic31.nipic.com/20130624/8821914_104949466000_2.jpg",
-			"http://pic6.nipic.com/20100330/4592428_113348099353_2.jpg",
-			"http://pic9.nipic.com/20100917/5653289_174356436608_2.jpg",
-			"http://img10.3lian.com/sc6/show02/38/65/386515.jpg",
-			"http://pic1.nipic.com/2008-12-09/200812910493588_2.jpg",
-			"http://pic2.ooopic.com/11/79/98/31bOOOPICb1_1024.jpg" };*/
+			"改革开放是我们党的一次伟大觉醒，正是这个伟大觉醒孕育了我们党从理论到实践的伟大创造。改革开放是中国人民和中华民族发展史上一次伟大革命，正是这个伟大革命推动了中国特色社会主义事业的伟大飞跃！",
+			"建立中国共产党、成立中华人民共和国、推进改革开放和中国特色社会主义事业，是五四运动以来我国发生的三大历史性事件，是近代以来实现中华民族伟大复兴的三大里程碑。",
+			"40年的实践充分证明，改革开放是党和人民大踏步赶上时代的重要法宝，是坚持和发展中国特色社会主义的必由之路，是决定当代中国命运的关键一招，也是决定实现“两个一百年”奋斗目标、实现中华民族伟大复兴的关键一招。" };
 	public static final String[] HEADIMG = {
-			"http://img.wzfzl.cn/uploads/allimg/140820/co140R00Q925-14.jpg",
-			"http://www.feizl.com/upload2007/2014_06/1406272351394618.png",
-			"http://v1.qzone.cc/avatar/201308/30/22/56/5220b2828a477072.jpg%21200x200.jpg",
-			"http://v1.qzone.cc/avatar/201308/22/10/36/521579394f4bb419.jpg!200x200.jpg",
-			"http://v1.qzone.cc/avatar/201408/20/17/23/53f468ff9c337550.jpg!200x200.jpg",
-			"http://cdn.duitang.com/uploads/item/201408/13/20140813122725_8h8Yu.jpeg",
-			"http://img.woyaogexing.com/touxiang/nv/20140212/9ac2117139f1ecd8%21200x200.jpg",
-			"http://p1.qqyou.com/touxiang/uploadpic/2013-3/12/2013031212295986807.jpg"};
+			"https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
+			"http://img3.imgtn.bdimg.com/it/u=3373980577,1362281232&fm=26&gp=0.jpg",
+			"http://img3.imgtn.bdimg.com/it/u=1608247389,2407617930&fm=11&gp=0.jpg",
+			"http://img2.imgtn.bdimg.com/it/u=409758014,3865547406&fm=11&gp=0.jpg"};
 
 	public static List<User> users = new ArrayList<User>();
 	public static List<PhotoInfo> PHOTOS = new ArrayList<>();
@@ -96,52 +77,52 @@ public class DatasUtil {
 		users.add(user7);
 
 		PhotoInfo p1 = new PhotoInfo();
-		p1.url = "http://f.hiphotos.baidu.com/image/pic/item/faf2b2119313b07e97f760d908d7912396dd8c9c.jpg";
+		p1.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p1.w = 640;
 		p1.h = 792;
 
 		PhotoInfo p2 = new PhotoInfo();
-		p2.url = "http://g.hiphotos.baidu.com/image/pic/item/4b90f603738da977c76ab6fab451f8198718e39e.jpg";
+		p2.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p2.w = 640;
 		p2.h = 792;
 
 		PhotoInfo p3 = new PhotoInfo();
-		p3.url = "http://e.hiphotos.baidu.com/image/pic/item/902397dda144ad343de8b756d4a20cf430ad858f.jpg";
+		p3.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p3.w = 950;
 		p3.h = 597;
 
 		PhotoInfo p4 = new PhotoInfo();
-		p4.url = "http://a.hiphotos.baidu.com/image/pic/item/a6efce1b9d16fdfa0fbc1ebfb68f8c5495ee7b8b.jpg";
+		p4.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p4.w = 533;
 		p4.h = 800;
 
 		PhotoInfo p5 = new PhotoInfo();
-		p5.url = "http://b.hiphotos.baidu.com/image/pic/item/a71ea8d3fd1f4134e61e0f90211f95cad1c85e36.jpg";
+		p5.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p5.w = 700;
 		p5.h = 467;
 
 		PhotoInfo p6 = new PhotoInfo();
-		p6.url = "http://c.hiphotos.baidu.com/image/pic/item/7dd98d1001e939011b9c86d07fec54e737d19645.jpg";
+		p6.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p6.w = 700;
 		p6.h = 467;
 
 		PhotoInfo p7 = new PhotoInfo();
-		p7.url = "http://pica.nipic.com/2007-10-17/20071017111345564_2.jpg";
+		p7.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p7.w = 1024;
 		p7.h = 640;
 
 		PhotoInfo p8 = new PhotoInfo();
-		p8.url = "http://pic4.nipic.com/20091101/3672704_160309066949_2.jpg";
+		p8.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p8.w = 1024;
 		p8.h = 768;
 
 		PhotoInfo p9 = new PhotoInfo();
-		p9.url = "http://pic4.nipic.com/20091203/1295091_123813163959_2.jpg";
+		p9.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p9.w = 1024;
 		p9.h = 640;
 
 		PhotoInfo p10 = new PhotoInfo();
-		p10.url = "http://pic31.nipic.com/20130624/8821914_104949466000_2.jpg";
+		p10.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
 		p10.w = 1024;
 		p10.h = 768;
 
@@ -172,7 +153,7 @@ public class DatasUtil {
 			int type = getRandomNum(10) % 2;
 			if (type == 0) {
 				item.setType("1");// 链接
-				item.setLinkImg("http://pics.sc.chinaz.com/Files/pic/icons128/2264/%E8%85%BE%E8%AE%AFQQ%E5%9B%BE%E6%A0%87%E4%B8%8B%E8%BD%BD1.png");
+				item.setLinkImg("https://img6.bdstatic.com/img/image/public/gaigekaifang.png");
 				item.setLinkTitle("百度一下，你就知道");
 			} else if(type == 1){
 				item.setType("2");// 图片
