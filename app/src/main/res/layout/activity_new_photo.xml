@@ -49,7 +49,7 @@
         android:layout_marginTop="44dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:srcCompat="@color/top_bar" />
+        app:srcCompat="@color/white" />
 
     <Button
         android:id="@+id/button3"

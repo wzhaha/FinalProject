@@ -16,7 +16,6 @@ import com.food.test.finalproject.R;
 
 public class SelectPicPopupWindow extends PopupWindow {
 
-
     private Button btn_take_photo, btn_pick_photo, btn_cancel;
     private View mMenuView;
 

@@ -3,7 +3,6 @@ package com.food.test.finalproject.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.transition.Explode;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -20,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity {
     // the views in our login screen
     public @BindView(R.id.etUsername)EditText etUsername;
     public @BindView (R.id.etPassword)EditText etPassword;
@@ -70,7 +69,7 @@ public class LoginActivity extends AppCompatActivity{
     private void login(String username, String password){
 
         // go to home activity after successful login
-        final Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        final Intent intent = new Intent(LoginActivity.this, MainFriendActivity.class);
         startActivity(intent);
         finish();
 

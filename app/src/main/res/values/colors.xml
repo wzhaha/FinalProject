@@ -4,8 +4,33 @@
     <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#ffffff</color>
 
+    <color name="black">#000000</color>
     <color name="headBackground">#fafafa</color>
     <color name="grey">#dad2d2</color>
+
+
+    <color name="color_8290AF">#8290AF</color>
+    <color name="color_232323">#232323</color>
+    <color name="color_aeaeae">#aeaeae</color>
+    <color name="im_social_dig_name_bg">#DDDDDD</color>
+    <color name="im_font_color_text_hint">#abb1b6</color>
+    <color name="im_line_color">#dadada</color>
+    <color name="name_selector_color">#cccccc</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_no_photo">#EEEEEE</color>
+    <color name="title_bg">#373B3E</color>
+    <color name="video_bg">#ededed</color>
+
+
+
+    <!--========================-->
+    <color name="praise_item_default">#333333</color>
+    <color name="praise_item_selector_default">#cccccc</color>
+    <color name="praise_item">#8290AF</color>
+
+    <color name="default_clickable_color">#cccccc</color>
+    <color name="basic_color_primary">#373b3e</color>
+
     <color name="action_bar_semi_transparent_white">#bfffffff</color>
     <color name="action_bar_transparent_background">#20000000</color>
     <color name="action_bar_transparent_background_pressed_state">#30000000</color>
@@ -13,7 +38,6 @@
     <color name="ads_manager_title_color">#de000000</color>
     <color name="avatar_stroke">@color/black_20_transparent</color>
     <color name="bioTextEntityFontColor">@color/blue_8</color>
-    <color name="black">#ff000000</color>
     <color name="black_10_transparent">#1a000000</color>
     <color name="black_15_transparent">#26000000</color>
     <color name="black_20_transparent">#33000000</color>
@@ -261,7 +285,6 @@
     <color name="text_view_link_color">#ff00356d</color>
     <color name="title_color">#ff999999</color>
     <color name="title_text">#ff262626</color>
-    <color name="transparent">#00000000</color>
     <color name="tray_avatar_white_border_color">@color/white</color>
     <color name="tray_item_border_color">@color/black</color>
     <color name="white">#ffffffff</color>
@@ -301,5 +324,4 @@
     <color name="ig_brand_yellow_gold">#fccc63</color>
     <color name="ig_brand_yellow_gold_70a">#B3fccc63</color>
     <color name="ig_brand_yellow_orange">#fbad50</color>
-
 </resources>

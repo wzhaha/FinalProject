@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.food.test.finalproject.CameraActivity;
@@ -19,7 +18,6 @@ import com.food.test.finalproject.adapter.ViewPagerAdapter;
 import com.food.test.finalproject.fragment.HomeFragment;
 import com.food.test.finalproject.fragment.PublishFragment;
 import com.food.test.finalproject.fragment.UserInfoFragment;
-import com.food.test.finalproject.utils.ActivityUtils;
 import com.food.test.finalproject.utils.BottomNavigationViewHelper;
 import com.lqr.imagepicker.ImagePicker;
 import com.lqr.imagepicker.ui.ImageGridActivity;

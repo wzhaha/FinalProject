@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,7 +24,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeFragment extends Fragment{
+public class HomeFragment extends Fragment {
 
     @BindView(R.id.rvPosts)
     RecyclerView rvPosts;
@@ -94,7 +93,7 @@ public class HomeFragment extends Fragment{
                 commentAdapter=new QuickAdapter<Comment>(comments) {
                     @Override
                     public int getLayoutId(int viewType) {
-                        return R.layout.item_comment;
+                        return R.layout.item_comment_main;
                     }
                     @Override
                     public void convert(VH holder, Comment data, int position) {
