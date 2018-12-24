@@ -474,6 +474,13 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
 		}
 	}
 
+	public void addCircle(CircleItem item) {
+        List<CircleItem> old = circleAdapter.getDatas();
+        old.add(0, item);
+        circleAdapter.setDatas(old);
+        circleAdapter.notifyDataSetChanged();
+    }
+
     @Override
     public void update2loadData(int loadType, List<CircleItem> datas) {
         if (loadType == TYPE_PULLREFRESH){
