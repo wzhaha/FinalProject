@@ -47,7 +47,6 @@
         <activity android:name=".activity.MainFriendActivity"/>
         <activity android:name=".CameraActivity" />
         <activity android:name=".NewPhotoActivity"/>
-        <activity android:name=".activity.MainActivity"/>
         <activity android:name=".activity.SignUpActivity"/>
 
         <meta-data
@@ -73,6 +72,7 @@
         <activity android:name="com.tencent.connect.common.AssistActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".activity.ProfileActivity"/>
 
     </application>
 

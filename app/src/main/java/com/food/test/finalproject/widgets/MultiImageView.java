@@ -16,9 +16,6 @@ import com.food.test.finalproject.bean.PhotoInfo;
 import com.food.test.finalproject.utils.DensityUtil;
 import com.food.test.finalproject.utils.UrlToBitmap;
 
-//import com.yiw.circledemo.R;
-//import com.yiw.circledemo.bean.PhotoInfo;
-//import com.yiw.circledemo.utils.DensityUtil;
 
 import java.io.FileInputStream;
 import java.util.List;

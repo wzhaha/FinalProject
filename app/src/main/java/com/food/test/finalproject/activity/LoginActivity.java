@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // check if user is already logged in
         if (login){
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, MainFriendActivity.class);
             startActivity(intent);
             finish();
         }
@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(Object o) {
                         try{
-                            Intent i2 = new Intent(LoginActivity.this,MainActivity.class);
+                            Intent i2 = new Intent(LoginActivity.this,MainFriendActivity.class);
                             startActivity(i2);
                         }catch (Exception e){
                             e.printStackTrace();

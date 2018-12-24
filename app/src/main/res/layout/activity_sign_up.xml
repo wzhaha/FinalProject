@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".activity.SignUpActivity">
 
     <ImageView
         android:id="@+id/ivProfile"
@@ -17,49 +17,6 @@
         app:srcCompat="@drawable/instagram_user" />
 
     <EditText
-        android:id="@+id/etName"
-        android:background="@drawable/btn_border"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_below="@id/ivProfile"
-        android:padding="12dp"
-        android:textColorHint="@color/body_text"
-        android:textColor="@color/black_80_transparent"
-        android:textSize="14dp"
-        android:hint="Name"/>
-
-    <EditText
-        android:id="@+id/etEmail"
-        android:background="@drawable/btn_border"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_below="@id/etName"
-        android:padding="12dp"
-        android:textColorHint="@color/body_text"
-        android:textColor="@color/black_80_transparent"
-        android:textSize="14dp"
-        android:hint="Email"/>
-
-    <EditText
-        android:id="@+id/etPhone"
-        android:background="@drawable/btn_border"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_below="@id/etEmail"
-        android:padding="12dp"
-        android:textColorHint="@color/body_text"
-        android:textColor="@color/black_80_transparent"
-        android:textSize="14dp"
-        android:hint="Phone (optional)"/>
-
-    <EditText
         android:id="@+id/etUsername"
         android:background="@drawable/btn_border"
         android:layout_width="match_parent"
@@ -67,7 +24,8 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
-        android:layout_below="@id/etPhone"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/ivProfile"
         android:padding="12dp"
         android:textColorHint="@color/body_text"
         android:textColor="@color/black_80_transparent"

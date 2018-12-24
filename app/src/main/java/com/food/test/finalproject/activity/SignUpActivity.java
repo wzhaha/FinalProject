@@ -19,9 +19,6 @@ import butterknife.OnClick;
 public class SignUpActivity extends AppCompatActivity {
 
     // the views
-    @BindView(R.id.etName) EditText etName;
-    @BindView(R.id.etEmail) EditText etEmail;
-    @BindView(R.id.etPhone) EditText etPhone;
     @BindView(R.id.etUsername) EditText etUsername;
     @BindView(R.id.etPassword) EditText etPassword;
     @BindView(R.id.etConfirmPassword) EditText etConfirmPassword;
@@ -45,18 +42,15 @@ public class SignUpActivity extends AppCompatActivity {
 //            ParseUser.logOut();
 //        }
         // access text in views
-        String name = etName.getText().toString();
-        String email = etEmail.getText().toString();
-        String phone = etName.getText().toString();
         String username = etUsername.getText().toString();
         String password = etPassword.getText().toString();
         String confirmPassword = etConfirmPassword.getText().toString();
 
         // create user conditions
-        if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(username)
+        if (!TextUtils.isEmpty(username)
                 && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(confirmPassword)){
             if (password.equals(confirmPassword)){
-                createUser(email, name, username, password, phone);
+                createUser(username, password);
             } else{
                 Toast.makeText(SignUpActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             }
@@ -69,13 +63,15 @@ public class SignUpActivity extends AppCompatActivity {
     // on click for login text view
     @OnClick(R.id.tvLogin)
     public void onLoginClick(){
-        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+        Intent intent = new Intent(SignUpActivity.this, MainFriendActivity.class);
         startActivity(intent);
         finish();
     }
 
     // method to create the user on the parse server
-    public void createUser(String email, String name, String username, String password, @Nullable String phone){
+    public void createUser(String username, String password){
+        Intent intent=new Intent(SignUpActivity.this,LoginActivity.class);
+        startActivity(intent);
 
     }
 }

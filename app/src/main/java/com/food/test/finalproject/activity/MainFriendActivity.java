@@ -124,6 +124,9 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
 					shareTypeSelect.showAtLocation(MainFriendActivity.this.findViewById(R.id.navigation),Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
 					return true;
 				case R.id.navigation_notifications:
+					Intent intent=new Intent(MainFriendActivity.this,ProfileActivity.class);
+					startActivity(intent);
+					overridePendingTransition(0, 0);
 					return true;
 			}
 			return false;
