@@ -56,6 +56,7 @@ public class CameraActivity extends AppCompatActivity {
                 //获取图片bitmap
                 //Write file
                 try{
+
                     String filename = getRandomString(8) + ".png";
                     FileOutputStream stream = openFileOutput(filename, Context.MODE_PRIVATE);
                     bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);

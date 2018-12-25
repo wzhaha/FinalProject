@@ -42,6 +42,7 @@ public class ImagePagerActivity extends YWActivity{
     public ImageSize imageSize;
     private int startPos;
     private ArrayList<String> imgUrls;
+//    private Context context;
 
 
     public static void startImagePagerActivity(Context context, List<String> imgUrls, int position, ImageSize imageSize){
@@ -176,41 +177,78 @@ public class ImagePagerActivity extends YWActivity{
                 ((FrameLayout)view).addView(loading);
 
                 final String imgurl = datas.get(position);
-
-                Glide.with(context)
-                        .load(imgurl)
-                        .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存多个尺寸
-                        .thumbnail(0.1f)//先显示缩略图  缩略图为原图的1/10
-                        .error(R.drawable.ic_launcher)
-                        .into(new GlideDrawableImageViewTarget(imageView){
-                            @Override
-                            public void onLoadStarted(Drawable placeholder) {
-                                super.onLoadStarted(placeholder);
+                if (imgurl.startsWith("http")) {
+                    Glide.with(context)
+                            .load(imgurl)
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存多个尺寸
+                            .thumbnail(0.1f)//先显示缩略图  缩略图为原图的1/10
+                            .error(R.drawable.ic_launcher)
+                            .into(new GlideDrawableImageViewTarget(imageView){
+                                @Override
+                                public void onLoadStarted(Drawable placeholder) {
+                                    super.onLoadStarted(placeholder);
                                /* if(smallImageView!=null){
                                     smallImageView.setVisibility(View.VISIBLE);
                                     Glide.with(context).load(imgurl).into(smallImageView);
                                 }*/
-                                loading.setVisibility(View.VISIBLE);
-                            }
+                                    loading.setVisibility(View.VISIBLE);
+                                }
 
-                            @Override
-                            public void onLoadFailed(Exception e, Drawable errorDrawable) {
-                                super.onLoadFailed(e, errorDrawable);
+                                @Override
+                                public void onLoadFailed(Exception e, Drawable errorDrawable) {
+                                    super.onLoadFailed(e, errorDrawable);
                                 /*if(smallImageView!=null){
                                     smallImageView.setVisibility(View.GONE);
                                 }*/
-                                loading.setVisibility(View.GONE);
-                            }
+                                    loading.setVisibility(View.GONE);
+                                }
 
-                            @Override
-                            public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
-                                super.onResourceReady(resource, animation);
-                                loading.setVisibility(View.GONE);
+                                @Override
+                                public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                                    super.onResourceReady(resource, animation);
+                                    loading.setVisibility(View.GONE);
                                 /*if(smallImageView!=null){
                                     smallImageView.setVisibility(View.GONE);
                                 }*/
-                            }
-                        });
+                                }
+                            });
+                } else {
+                    Glide.with(context)
+                            .load(this.context.getFileStreamPath(imgurl))
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存多个尺寸
+                            .thumbnail(0.1f)//先显示缩略图  缩略图为原图的1/10
+                            .error(R.drawable.ic_launcher)
+                            .into(new GlideDrawableImageViewTarget(imageView){
+                                @Override
+                                public void onLoadStarted(Drawable placeholder) {
+                                    super.onLoadStarted(placeholder);
+                               /* if(smallImageView!=null){
+                                    smallImageView.setVisibility(View.VISIBLE);
+                                    Glide.with(context).load(imgurl).into(smallImageView);
+                                }*/
+                                    loading.setVisibility(View.VISIBLE);
+                                }
+
+                                @Override
+                                public void onLoadFailed(Exception e, Drawable errorDrawable) {
+                                    super.onLoadFailed(e, errorDrawable);
+                                /*if(smallImageView!=null){
+                                    smallImageView.setVisibility(View.GONE);
+                                }*/
+                                    loading.setVisibility(View.GONE);
+                                }
+
+                                @Override
+                                public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                                    super.onResourceReady(resource, animation);
+                                    loading.setVisibility(View.GONE);
+                                /*if(smallImageView!=null){
+                                    smallImageView.setVisibility(View.GONE);
+                                }*/
+                                }
+                            });
+                }
+
 
                 container.addView(view, 0);
             }
