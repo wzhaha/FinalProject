@@ -63,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
     // on click for login text view
     @OnClick(R.id.tvLogin)
     public void onLoginClick(){
-        Intent intent = new Intent(SignUpActivity.this, MainFriendActivity.class);
+        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

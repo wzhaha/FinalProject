@@ -257,7 +257,7 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
                     public void run() {
                         presenter.loadData(TYPE_PULLREFRESH);
                     }
-                }, 2000);
+                }, 500);
             }
         };
         recyclerView.setRefreshListener(refreshListener);

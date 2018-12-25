@@ -3,14 +3,15 @@ package com.food.test.finalproject.widgets;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.food.test.finalproject.R;
 import com.food.test.finalproject.bean.PhotoInfo;
 import com.food.test.finalproject.utils.DensityUtil;
@@ -18,6 +19,11 @@ import com.food.test.finalproject.utils.UrlToBitmap;
 
 
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -32,6 +38,8 @@ public class MultiImageView extends LinearLayout {
 
 	// 照片的Url列表
 	private List<PhotoInfo> imagesList;
+	private static final int MSG_SUCCESS = 0;//获取图片成功的标识
+	private static final int MSG_FAILURE = 1;//获取图片失败的标识
 
 	/** 长度 单位为Pixel **/
 	private int pxOneMaxWandH;  // 单张图最大允许宽高
@@ -216,7 +224,9 @@ public class MultiImageView extends LinearLayout {
 		imageView.setBackgroundColor(getResources().getColor(R.color.im_font_color_text_hint));
 //		imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon_head_bg));
 		if (photoInfo.path == null) {
-			imageView.setImageBitmap(new UrlToBitmap().returnBitMap(photoInfo.url));
+//			imageView.setImageBitmap(new UrlToBitmap().returnBitMap(photoInfo.url));
+//			returnBitMap(photoInfo.url,imageView.getId());
+			((ColorFilterImageView) imageView).setImageURL(photoInfo.url);
 		} else {
 			// 读取临时
 			try {
@@ -252,4 +262,5 @@ public class MultiImageView extends LinearLayout {
 	public interface OnItemClickListener{
 		public void onItemClick(View view, int position);
 	}
+
 }
