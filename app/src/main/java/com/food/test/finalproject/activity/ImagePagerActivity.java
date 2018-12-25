@@ -177,7 +177,7 @@ public class ImagePagerActivity extends YWActivity{
                 ((FrameLayout)view).addView(loading);
 
                 final String imgurl = datas.get(position);
-                if (imgurl.startsWith("http")) {
+                if (imgurl.startsWith("http") || imgurl.startsWith("/storage")) {
                     Glide.with(context)
                             .load(imgurl)
                             .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存多个尺寸

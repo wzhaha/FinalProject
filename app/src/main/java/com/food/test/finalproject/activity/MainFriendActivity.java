@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.food.test.finalproject.CameraActivity;
+import com.food.test.finalproject.NewPhotoActivity;
 import com.food.test.finalproject.R;
 import com.food.test.finalproject.UILImageLoader;
 import com.food.test.finalproject.adapter.CircleAdapter;
@@ -45,7 +46,9 @@ import com.food.test.finalproject.widgets.DivItemDecoration;
 import com.food.test.finalproject.widgets.TitleBar;
 import com.food.test.finalproject.widgets.dialog.UpLoadDialog;
 import com.lqr.imagepicker.ImagePicker;
+import com.lqr.imagepicker.bean.ImageItem;
 import com.lqr.imagepicker.ui.ImageGridActivity;
+import com.lqr.imagepicker.ui.ImagePreviewActivity;
 import com.lqr.imagepicker.view.CropImageView;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
@@ -67,6 +70,8 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 //import com.yiw.circledemo.widgets.TitleBar;
 //import com.yiw.circledemo.widgets.dialog.UpLoadDialog;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import pub.devrel.easypermissions.EasyPermissions;
@@ -575,6 +580,21 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+	    if (resultCode == 1004) {
+            if (data != null) {
+                //是否发送原图
+                boolean isOrig = data.getBooleanExtra(ImagePreviewActivity.ISORIGIN, false);
+                ArrayList<ImageItem> images = (ArrayList<ImageItem>) data.getSerializableExtra(ImagePicker.EXTRA_RESULT_ITEMS);
+
+                Log.e("CSDN_LQR", isOrig ? "发原图" : "不发原图");//若不发原图的话，需要在自己在项目中做好压缩图片算法
+                for (ImageItem imageItem : images) {
+                    Log.e("CSDN_LQR", imageItem.path);
+                }
+                Intent intent = new Intent(getBaseContext(), NewPhotoActivity.class);
+                intent.putExtra("pictures", images);
+				startActivityForResult(intent, 1);
+            }
+        }
 		if (resultCode == RESULT_OK) {
 		    CircleItem item = (CircleItem) data.getExtras().getSerializable("circle");
 		    addCircle(item);

@@ -11,6 +11,7 @@ public class PhotoInfo implements Serializable {
 
     public String url;
     public String path;
+    public String aPath;
     public int w;
     public int h;
 }

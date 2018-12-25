@@ -227,7 +227,7 @@ public class MultiImageView extends LinearLayout {
 //			imageView.setImageBitmap(new UrlToBitmap().returnBitMap(photoInfo.url));
 //			returnBitMap(photoInfo.url,imageView.getId());
 			((ColorFilterImageView) imageView).setImageURL(photoInfo.url);
-		} else {
+		} else if (photoInfo.aPath == null) {
 			// 读取临时
 			try {
 				FileInputStream is = getContext().openFileInput(photoInfo.path);
@@ -237,8 +237,10 @@ public class MultiImageView extends LinearLayout {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-
-		}
+		} else {
+		    Bitmap bitmap = BitmapFactory.decodeFile(photoInfo.aPath);
+		    imageView.setImageBitmap(bitmap);
+        }
 //		Glide.with(getContext()).load(photoInfo.url).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
 
 		return imageView;
