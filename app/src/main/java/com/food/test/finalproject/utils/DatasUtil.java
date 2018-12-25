@@ -26,22 +26,23 @@ import java.util.Random;
  */
 public class DatasUtil {
 	public static final String[] CONTENTS = {
+			"刘老板，联系方式：18810959899,公司官网： http://mis.bjtu.edu.cn.",
 			"改革开放是我们党的一次伟大觉醒，正是这个伟大觉醒孕育了我们党从理论到实践的伟大创造。改革开放是中国人民和中华民族发展史上一次伟大革命，正是这个伟大革命推动了中国特色社会主义事业的伟大飞跃！",
 			"建立中国共产党、成立中华人民共和国、推进改革开放和中国特色社会主义事业，是五四运动以来我国发生的三大历史性事件，是近代以来实现中华民族伟大复兴的三大里程碑。",
 			"40年的实践充分证明，改革开放是党和人民大踏步赶上时代的重要法宝，是坚持和发展中国特色社会主义的必由之路，是决定当代中国命运的关键一招，也是决定实现“两个一百年”奋斗目标、实现中华民族伟大复兴的关键一招。" };
 	public static final String[] HEADIMG = {
-			"https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-            "https://img6.bdstatic.com/img/image/public/gaigekaifang.png",
-			"http://img3.imgtn.bdimg.com/it/u=3373980577,1362281232&fm=26&gp=0.jpg",
-			"http://img3.imgtn.bdimg.com/it/u=1608247389,2407617930&fm=11&gp=0.jpg",
-			"http://img2.imgtn.bdimg.com/it/u=409758014,3865547406&fm=11&gp=0.jpg"};
+			"https://img2.woyaogexing.com/2018/12/22/9607fc6633c54399a58ad17310efdfb0!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/27c0d1b8697b4cc78c609d97a05e34aa!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/3a5b4f8e35f44081b93d23129615d5e9!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/35fe509b537a424b8ae3c920823b0c0f!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/44e3cfc3f18840269d6fc0e448df9541!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/5c79ae811cc1431594a4090f20b0a054!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/aabc2fc9fe7845bfb1b0595df9d79969!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/150f76d964154f83a492e9aee2dc1e01!400x400.jpeg",
+            "https://img2.woyaogexing.com/2018/12/22/71a6c12ee09949c6b3a06ac96c0ccce6!400x400.jpeg",
+			"https://img2.woyaogexing.com/2018/12/22/34723dfa041f46a1a80618a92dde0c38!400x400.jpeg",
+			"https://img2.woyaogexing.com/2018/12/22/772781a6ff534110aa3b33f697cc21a1!400x400.jpeg",
+			"https://img2.woyaogexing.com/2018/12/22/d7d443a853b742968ff13cb542c61ffb!400x400.jpeg"};
 
 	public static List<User> users = new ArrayList<User>();
 	public static List<PhotoInfo> PHOTOS = new ArrayList<>();
@@ -77,54 +78,54 @@ public class DatasUtil {
 		users.add(user7);
 
 		PhotoInfo p1 = new PhotoInfo();
-		p1.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p1.w = 640;
-		p1.h = 792;
+		p1.url = "https://s1.st.meishij.net/r/115/102/588115/s588115_154555440147327.jpg";
+		p1.w = 328;
+		p1.h = 440;
 
 		PhotoInfo p2 = new PhotoInfo();
-		p2.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p2.w = 640;
-		p2.h = 792;
+		p2.url = "https://s1.st.meishij.net/r/105/225/1306355/s1306355_154375123420868.jpg";
+		p2.w = 328;
+		p2.h = 440;
 
 		PhotoInfo p3 = new PhotoInfo();
-		p3.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p3.w = 950;
-		p3.h = 597;
+		p3.url = "https://s1.st.meishij.net/r/147/198/4174647/s4174647_154098464345073.jpg";
+		p3.w = 328;
+		p3.h = 440;
 
 		PhotoInfo p4 = new PhotoInfo();
-		p4.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p4.w = 533;
-		p4.h = 800;
+		p4.url = "https://s1.st.meishij.net/r/19/99/9087269/s9087269_154561859991657.jpg";
+		p4.w = 328;
+		p4.h = 440;
 
 		PhotoInfo p5 = new PhotoInfo();
-		p5.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p5.w = 700;
-		p5.h = 467;
+		p5.url = "https://s1.st.meishij.net/r/216/197/6174466/s6174466_154350283513462.jpg";
+		p5.w = 328;
+		p5.h = 440;
 
 		PhotoInfo p6 = new PhotoInfo();
-		p6.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p6.w = 700;
-		p6.h = 467;
+		p6.url = "https://s1.st.meishij.net/r/44/110/4152544/s4152544_154520112273289.jpg";
+		p6.w = 328;
+		p6.h = 440;
 
 		PhotoInfo p7 = new PhotoInfo();
-		p7.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p7.w = 1024;
-		p7.h = 640;
+		p7.url = "https://s1.st.meishij.net/r/13/90/4835013/s4835013_154099486252608.jpg";
+		p7.w = 328;
+		p7.h = 440;
 
 		PhotoInfo p8 = new PhotoInfo();
-		p8.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p8.w = 1024;
-		p8.h = 768;
+		p8.url = "https://s1.st.meishij.net/r/231/13/6878481/s6878481_154563345590522.jpg";
+		p8.w = 328;
+		p8.h = 440;
 
 		PhotoInfo p9 = new PhotoInfo();
-		p9.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p9.w = 1024;
-		p9.h = 640;
+		p9.url = "http://site.meishij.net/r/124/42/3885624/s3885624_150180911918252.jpg";
+		p9.w = 328;
+		p9.h = 440;
 
 		PhotoInfo p10 = new PhotoInfo();
-		p10.url = "https://img6.bdstatic.com/img/image/public/gaigekaifang.png";
-		p10.w = 1024;
-		p10.h = 768;
+		p10.url = "http://site.meishij.net/r/02/83/5458252/s5458252_150184485716388.jpg";
+		p10.w = 328;
+		p10.h = 440;
 
 		PHOTOS.add(p1);
 		PHOTOS.add(p2);
@@ -153,8 +154,8 @@ public class DatasUtil {
 			int type = getRandomNum(10) % 2;
 			if (type == 0) {
 				item.setType("1");// 链接
-				item.setLinkImg("https://img6.bdstatic.com/img/image/public/gaigekaifang.png");
-				item.setLinkTitle("百度一下，你就知道");
+				item.setLinkImg("https://s1.st.meishij.net/r/115/102/588115/s588115_154555440147327.jpg");
+				item.setLinkTitle("美食分享汇");
 			} else if(type == 1){
 				item.setType("2");// 图片
 				item.setPhotos(createPhotos());

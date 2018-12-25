@@ -55,7 +55,7 @@ public class NewPhotoActivity extends AppCompatActivity {
 
     public void onSubmit(View view){
         Intent res = new Intent();
-        final String ava = "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3680604140,401532791&fm=179&app=42&f=JPEG?w=121&h=140";
+        final String ava = "https://img2.woyaogexing.com/2018/12/22/9607fc6633c54399a58ad17310efdfb0!400x400.jpeg";
         User user = new User("8", "自己", ava);
         user.setId("8");
         user.setName("自己");
