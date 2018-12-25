@@ -1,5 +1,16 @@
 apply plugin: 'com.android.application'
 
+
+//signingConfigs{
+//    signConfig {
+//        storeFile file ('/Users/mac/Desktop/foodshare.jks')//签名文件路径，
+//        //keystore的路径通常使用项目根目录的相对路径，但也可以是使用绝对路径，尽管这不推荐
+//        storePassword '777777' //密码
+//        keyAlias 'android'
+//        keyPassword '777777'  //密码
+//    }
+//}
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -15,16 +26,19 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.signConfig // 配置release包的签名
         }
     }
 }
 
 //sourceSets{
 //    main{
-//        jnilibs.srcDir 'libs'
-//        jni.srcDirs = []    //disable automatic ndk-build
+//        jniLibs.srcDirs 'libs'
+////        jni.srcDirs = []    //disable automatic ndk-build
 //    }
 //}
+
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -58,6 +72,7 @@ dependencies {
 
     implementation files('libs/open_sdk_r5788_lite.jar')
 
+    implementation files('libs/BaiduLBS_Android.jar')
     implementation files('libs/BaiduLBS_Android.jar')
 
     implementation 'com.jakewharton:butterknife:8.4.0'

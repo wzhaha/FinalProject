@@ -54,7 +54,7 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="332dp"
+        android:layout_width="101dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="68dp"
@@ -89,5 +89,17 @@
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="238dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="end"
+        android:textColor="@color/black_70_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
 
 </android.support.constraint.ConstraintLayout>

@@ -188,10 +188,11 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		initPermission();
 		setContentView(R.layout.activityfriend_main);
 		presenter = new CirclePresenter(this);
 		initView();
-		initPermission();
+
 		initUniversalImageLoader();
 		initImagePicker();
         //实现自动下拉刷新功能
@@ -217,7 +218,10 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
         		, Manifest.permission.ACCESS_FINE_LOCATION
         		, Manifest.permission.CHANGE_WIFI_STATE
         		, Manifest.permission.ACCESS_WIFI_STATE
-        		, Manifest.permission.ACCESS_NETWORK_STATE};
+        		, Manifest.permission.ACCESS_NETWORK_STATE
+                , Manifest.permission.READ_PHONE_STATE
+                , Manifest.permission.INTERNET
+                , Manifest.permission.CALL_PHONE};
 
         if (EasyPermissions.hasPermissions(this, perms)) {
             // Already have permission, do the thing
@@ -687,6 +691,10 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
         Toast.makeText(this, "您拒绝了相关权限，可能会导致相关功能不可用" , Toast.LENGTH_LONG).show();
+        for(int i=0;i<perms.size();i++){
+			System.out.println(perms.get(i));
+		}
+
         /*if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
             new AppSettingsDialog.Builder(this, getString(R.string.rationale_ask_again))
                     .setTitle(getString(R.string.title_settings_dialog))
