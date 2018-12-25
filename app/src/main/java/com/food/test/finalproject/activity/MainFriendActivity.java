@@ -27,6 +27,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
 import com.bumptech.glide.Glide;
 import com.food.test.finalproject.CameraActivity;
 import com.food.test.finalproject.NewPhotoActivity;
@@ -200,14 +202,22 @@ public class MainFriendActivity extends YWActivity implements CircleContract.Vie
                 refreshListener.onRefresh();//执行数据加载操作
             }
         });
+
 	}
 
 
+	//////////
 	private void initPermission() {
         String[] perms = {Manifest.permission.CALL_PHONE
                 , Manifest.permission.WRITE_EXTERNAL_STORAGE
                 , Manifest.permission.READ_EXTERNAL_STORAGE
-                , Manifest.permission.CAMERA};
+                , Manifest.permission.CAMERA
+        		, Manifest.permission.ACCESS_COARSE_LOCATION
+        		, Manifest.permission.ACCEPT_HANDOVER
+        		, Manifest.permission.ACCESS_FINE_LOCATION
+        		, Manifest.permission.CHANGE_WIFI_STATE
+        		, Manifest.permission.ACCESS_WIFI_STATE
+        		, Manifest.permission.ACCESS_NETWORK_STATE};
 
         if (EasyPermissions.hasPermissions(this, perms)) {
             // Already have permission, do the thing

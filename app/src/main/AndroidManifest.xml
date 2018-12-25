@@ -17,6 +17,13 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.GET_TASKS" />
 
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+
 
     <application
         android:name="com.food.test.finalproject.MyApplication"
@@ -49,9 +56,17 @@
         <activity android:name=".NewPhotoActivity"/>
         <activity android:name=".activity.SignUpActivity"/>
 
+
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"> </service>
+
         <meta-data
             android:name="com.food.test.finalproject.MyGlideModule"
             android:value="GlideModule" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="oUp8gp1nFzjbyg2vDLTOW9CTXfgni55k" >
+        </meta-data>
 
 
 
