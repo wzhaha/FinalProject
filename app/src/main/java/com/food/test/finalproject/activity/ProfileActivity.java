@@ -40,7 +40,7 @@ public class ProfileActivity extends AppCompatActivity{
     private float imgFirstHeight;
     private Fragment[] mFragments = new Fragment[mTitles.length];
     private List<ImageView> titleIvs = new ArrayList<>();
-    private int[] titleImg = {R.drawable.bg, R.drawable.bg2};
+    private int[] titleImg = {R.drawable.bg, R.drawable.bg_title}; ///////////
     private RelativeLayout topView;
     private Window mwindow;
     private ViewPager vp_titleImg;
