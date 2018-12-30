@@ -51,7 +51,6 @@ public class ImagePagerActivity extends YWActivity{
         intent.putExtra(INTENT_POSITION, position);
         intent.putExtra(INTENT_IMAGESIZE, imageSize);
         context.startActivity(intent);
-
     }
 
     @Override
